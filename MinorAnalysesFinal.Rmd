@@ -1,0 +1,281 @@
+---
+title: "minor: skull and manus analyses, MS edition"
+author: "Maya Juman"
+date: "September 3, 2021"
+output: html_document
+---
+
+```{r}
+library("ggplot2")
+library("rnaturalearth")
+library("rnaturalearthdata")
+library("ggspatial")
+```
+
+```{r}
+library(sf)
+theme_set(theme_bw())
+world <- ne_countries(scale = "medium", returnclass = "sf")
+sites <- read.csv("minor_loc.csv")
+
+map <- ggplot(data = world) + geom_sf() +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), panel.grid.major = element_line(colour = "transparent"), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  coord_sf(xlim = c(97.5,119.5), ylim = c(-6.5,8), expand = FALSE) + xlab("Longitude") + ylab("Latitude") + 
+  scale_shape_manual(values = c(22,24,16,18,21), 
+                     guide = guide_legend(label.theme = element_text(angle = 0, 
+                                                                     face = "italic", size=9), ncol=3)) + theme(legend.title = element_blank()) + 
+  theme(legend.position = c(0.741,0.0865),
+        legend.spacing.x = unit(0.5, 'mm'), legend.key.size = unit(5.4, 'mm'), legend.background = element_rect(fill = "transparent")) + annotation_scale(location = "bl", width_hint = 0.14) +
+    annotation_north_arrow(location = "bl", which_north = "true", 
+        pad_x = unit(0.3, "in"), pad_y = unit(0.25, "in"), 
+        height = unit(1, "cm"),
+        width = unit(1, "cm"),
+        style = north_arrow_fancy_orienteering) + geom_point(data = sites, aes(x = Long, y = Lat, shape = Subspecies), size = 3, color = "black", fill = "white") + theme(axis.text.x = element_text(face="bold", color="black"), axis.text.y = element_text(face="bold", color="black")) + geom_point(aes(x=104.42, y=-0.49), colour="black", size = 0.6, shape = 3) + geom_point(aes(x=115.44, y=5.33), colour="white", size = 0.5, shape = 3) + geom_point(aes(x=116.93, y=7.27), colour="black", fill="white", size = 3, shape = 22) + geom_point(aes(x=116.93, y=7.27), colour="black", size = 0.4, shape = 3) + geom_point(aes(x=102.25, y=2.19), colour="black", size = 1.5, shape = 8) + geom_point(aes(x=102.43, y=-3.3), colour="black", size = 1.5, shape = 8)
+
+map
+
+#ggsave(map,file="Fig. 1.eps",width=200, height=120, units="mm")
+#ggsave(map,file="Fig. 1.jpg",width=200, height=120, units="mm")
+ggsave(map,file="Fig. 1.pdf",width=200, height=120, units="mm")
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(ggplot2)
+library(ggfortify)
+library(MASS)
+library(klaR)
+library(lme4)
+library(car)
+library(plyr)
+library(gridExtra)
+
+m <- c("grey60", "grey90", "black")
+n <- c("grey80", "black")
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+#skull data
+setwd("~/Desktop/minor/")
+x <- read.csv("mskull.csv")
+x[,11:32] <- log(x[,11:32])
+x <- x[-c(51),]
+table(x$Subspecies)
+x <- x[-c(4,12,45),] #dump certain rows: 4,12,45 because heavy missing data, 51 because wrong species (not included in supp data)
+x <- subset(x, select=-c(EPL,EB,Locality)) #remove certain columns
+x$Sex[x$Sex == ""] <- "sex unknown"
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+#hand data
+setwd("~/Desktop/minor/")
+y <- read.csv("minormanus.csv")
+y[,19:56] <- log(y[,19:56])
+y <- y[which(y$Age == "A"),] #only adults
+y <- subset(y, select = -c(Age, Locality, TOT, HB, Tail, HF, ear, WT, PercentTL, X2MPL, X2DPW, X3MPL, X3MPW, X4MPL, X4DPW, X5MPL, X5MPW))
+table(y$Subspecies)
+y <- y[-1,]
+y$Sex <- as.character(y$Sex)
+y$Sex[y$Sex == "F"] <- "f"
+y$Sex[y$Sex == "M"] <- "m"
+y$Sex[y$Sex == ""] <- "sex unknown"
+y$Sex[y$Sex == "?"] <- "sex unknown"
+y$Sex <- as.factor(y$Sex)
+```
+
+##1. Geographic variation on Borneo
+
+###a. Are mainland Bornean *T. m. caedis* distinct from mainland Bornean *T. m. minor*
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+#hand
+borneo2 <- y[y$Island == "Borneo",]
+borneo2 <- na.omit(subset(borneo2, select = c(Inst, Cat., Subspecies, Island, region, lat, long, Sex, Side, X1ML, X1PPL, X1MD, X1PPD, X1DPD, X2PPL, X2MW, X5ML)))
+
+borneo2$Subspecies <- droplevels(borneo2$Subspecies)
+table(borneo2$Subspecies)
+
+pc8 <- princomp(borneo2[,-c(1:9)], cor=TRUE)
+for (i in 1:8) {
+  pc8$loadings[,i] <- (pc8$loadings[,i] * pc8$sdev[i])
+}
+print(summary(pc8),digits=2,loadings=pc8$loadings,cutoff=0)
+round(pc8$sdev^2,2)
+borneo2$pc1 <- pc8[["scores"]][,1]
+borneo2$pc2 <- pc8[["scores"]][,2]
+borneo2$hull <- borneo2$Subspecies
+
+autoplot(pc8, x = 1, y = 2, data = borneo2, colour = 'Subspecies', label = FALSE, size = 2.5, label.size = 3, frame=TRUE) + ggtitle("Mainland Bornean T. m. caedis vs. T. m. minor manus PCA")
+
+find_hull <- function(borneo2) borneo2[chull(borneo2$pc1, borneo2$pc2), ]
+hulls <- ddply(borneo2, "hull", find_hull)
+
+m <- c("grey40", "grey80")
+n <- c("grey80", "black")
+
+a2 <-ggplot(data = borneo2, aes(x=pc1, y=pc2, group=Subspecies)) + scale_shape_manual(values = c(22,18), guide = guide_legend(label.theme = element_text(angle = 0, face = "italic", size=9))) + geom_vline(aes(xintercept = 0), size=0.25) + geom_hline(aes(yintercept = 0), size=0.25) + theme_bw() + ylim(-3.1,3.5) + xlab("PC1 (46.05%)") + ylab("PC2 (22.06%)") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) + theme(text = element_text(size=13)) + theme(legend.position = c(0.16, 0.95), legend.spacing.x = unit(2.5, 'mm'), legend.key.size = unit(2.5, 'mm'), legend.box.just = "left") + geom_polygon(data=hulls, alpha=0.3, aes(x=pc1, y=pc2, group=hull, fill=hull, linetype=hull), colour="black", show_guide = FALSE) + scale_linetype_manual(values=c(1,2)) + scale_fill_manual(values=m) + geom_point(aes(shape=Subspecies), color = "black", fill = "white", size=3) + annotate("text", x=4.1, y=3.2, label= "A", size = 10)
+
+a2
+
+ggsave(a2,file="Fig. 2A proofs.pdf",width=100, height=100, units="mm")
+#ggsave(a2,file="Fig. 2A.eps",width=100, height=100, units="mm")
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+#skull
+borneo <- x[x$Island == "Borneo",]
+
+borneo <- na.omit(subset(borneo, select = c(Museum, Num, Subspecies, Sex, region, Type, Island, lat, long, UTL, PPL, LIB, MH, MCH, MCW, MCIL, LTL)))
+
+borneo$Subspecies <- droplevels(borneo$Subspecies)
+table(borneo$Subspecies)
+
+pc7 <- princomp(borneo[,-c(1:9)], cor=TRUE)
+for (i in 1:8) {
+  pc7$loadings[,i] <- (pc7$loadings[,i] * pc7$sdev[i])
+}
+print(summary(pc7),digits=2,loadings=pc7$loadings,cutoff=0)
+round(pc7$sdev^2,2)
+
+borneo$pc1 <- pc7[["scores"]][,1]
+borneo$pc2 <- pc7[["scores"]][,2]
+borneo$hull <- borneo$Subspecies
+
+autoplot(pc7, x = 1, y = 2, data = borneo, colour = 'Subspecies', shape = 'Sex', label = FALSE, size = 2.5, label.size = 3, frame=TRUE) + ggtitle("Mainland Bornean T. m. caedis vs. T. m. minor skull PCA")
+
+find_hull2 <- function(borneo) borneo[chull(borneo$pc1, x1$pc2), ]
+hulls2 <- ddply(borneo, "hull", find_hull)
+
+b2 <-ggplot(data = borneo, aes(x=pc1, y=pc2, group=Subspecies)) + scale_shape_manual(values = c(22,18), guide = guide_legend(label.theme = element_text(angle = 0, face = "italic", size=9))) + geom_vline(aes(xintercept = 0), size=0.25) + geom_hline(aes(yintercept = 0), size=0.25) + theme_bw() + xlab("PC1 (54.25%)") + ylab("PC2 (20.31%)") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + theme(legend.title = element_blank()) + theme(text = element_text(size=13)) + theme(legend.position = c(0.16, 0.95), legend.spacing.x = unit(2.5, 'mm'), legend.key.size = unit(2.5, 'mm'), legend.box.just = "left", legend.background = element_rect(fill = "transparent")) + geom_polygon(data=hulls2, alpha=0.3, aes(x=pc1, y=pc2, group=hull, fill=hull, linetype=hull), colour="black", show_guide = FALSE) + scale_linetype_manual(values=c(1,2)) + scale_fill_manual(values=m) + geom_point(aes(shape=Subspecies), color = "black", fill = "white", size=3) + annotate("text", x=6.3, y=3, label= "B", size = 10) + xlim(-4.45,6.8) + ylim(-2.28,3.2)
+
+b2
+
+ggsave(b2,file="Fig. 2B proofs.pdf",width=100, height=100, units="mm")
+```
+
+###Manus PCA with all islands
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+ytot <- na.omit(subset(y, select = c(Inst, Cat., Subspecies, Island, region, lat, long, Sex, Side, X1ML, X1PPL, X1MD, X1PPD, X2MW, X3DPL, X2PPW, X4PPW)))
+
+ytot$Subspecies[ytot$Subspecies == "T. m. caedis"] <- "T. m. minor"
+
+ytot$Island <- droplevels(ytot$Island)
+table(ytot$Island)
+
+u2 <- ytot[which(ytot$Island == "Pulo Laut" | ytot$Island == "Singkep" | ytot$Island == "Lingga"),]
+u2$Island <- droplevels(u2$Island)
+
+pc24 <- princomp(ytot[,-c(1:9)], cor=TRUE)
+
+for (i in 1:8) {
+  pc24$loadings[,i] <- (pc24$loadings[,i] * pc24$sdev[i])
+}
+print(summary(pc24),digits=2,loadings=pc24$loadings,cutoff=0)
+round(pc24$sdev^2,2)
+
+ytot$pc1 <- pc24[["scores"]][,1]
+ytot$pc2 <- pc24[["scores"]][,2]
+ytot$hull <- ytot$Subspecies
+
+autoplot(pc24, x = 1, y = 2, data = ytot, colour = 'Island', label = FALSE, size = 2.5, label.size = 3, frame=TRUE) + ggtitle("All Islands, manus")
+
+find_hull <- function(ytot) ytot[chull(ytot$pc1, ytot$pc2), ]
+hulls3 <- ddply(ytot, "hull", find_hull)
+
+n <- c("grey60", "grey30", "grey80", "black", "grey60")
+
+a3 <- ggplot(data = ytot, aes(x=pc1, y=pc2, group=Island)) + scale_shape_manual(values = c(18,15,21,16,23,24), guide = guide_legend(label.theme = element_text(angle = 0, size=7))) + geom_vline(aes(xintercept = 0), size=0.25) + geom_hline(aes(yintercept = 0), size=0.25) + theme_bw() + xlab("PC1 (45.54%)") + ylab("PC2 (18.12%)") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + theme(legend.title = element_blank(), legend.background=element_rect(fill = "transparent")) + theme(text = element_text(size=10)) + theme(legend.position = c(0.002, 0.002), legend.spacing.x = unit(2, 'mm'), legend.key.size = unit(2, 'mm'), legend.justification = c("left", "bottom"),  legend.box.just = "left") + geom_polygon(data=hulls3, alpha=0.3, aes(x=pc1, y=pc2, group=hull, fill=hull, linetype=hull), colour="black", show_guide = FALSE) + scale_linetype_manual(values=c(5,1,10,2)) + scale_fill_manual(values=n) + geom_point(aes(shape=Island), color = "black", fill = "white", size=2.5) + annotate("text", x=5, y=2.5, label= "A", size = 10) + xlim(-4.9,5.5) + ylim(-3.7, 2.85) + theme(legend.key.size = unit(0.7, 'lines')) + geom_text(label="T. m. minor", x=-3.8, y=2.7, size = 3, color = "black", fontface = "italic", check_overlap = T) + geom_text(label="T. m.", x=-4.3, y=-1.15, size = 3, color = "black", fontface = "italic", check_overlap = T) + geom_text(label="malaccana", x=-4.3, y=-1.4, size = 3, color = "black", fontface = "italic", check_overlap = T) + geom_text(label="T. m. humeralis", x=4.3, y=-3.45, size = 3, color = "black", fontface = "italic", check_overlap = T)
+
+a3
+
+ggsave(a3,file="Fig. 3A proofs.pdf",width=100, height=100, units="mm")
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+ytot2 <- ytot[-which(ytot$Island == "Pulo Laut" | ytot$Island == "Singkep" | ytot$Island == "Lingga"),]
+
+linfiny2 <- lda(ytot2[,-c(1:9)],grouping=ytot2$Island, CV=TRUE)
+ctrawfiny2 <- table(ytot2$Island, linfiny2$class)
+ctrawfiny2 #rows are actual count and columns are predicted count
+
+# total percent correct: jackknife
+round(sum(diag(prop.table(ctrawfiny2))),4)
+
+linfiny2 <- lda(ytot2[,-c(1:9)],grouping=ytot2$Island, CV=FALSE)
+ctrawfiny2 <- table(ytot2$Island, predict(linfiny2)$class)
+ctrawfiny2 #rows are actual count and columns are predicted count
+
+# total percent correct: no jackknife
+round(sum(diag(prop.table(ctrawfiny2))),4)
+
+predict(linfiny2, u2[,-c(1:9)])$class
+predict(linfiny2, CV=TRUE, u2[,-c(1:9)])$class
+```
+
+DFA: 72.06%; Jackknife 60.29%
+
+When the islands are excluded from the original training dataset and treated as unknowns, they are classified as follows:
+Lingga (n = 2) classified as Borneo;
+Pulo Laut (n = 1) classified as Borneo;
+Singkep (n = 1) classified as Borneo
+
+###Skull PCA with all islands
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+xtot <- na.omit(subset(x, select = c(Museum, Num, Subspecies, Sex, region, Type, Island, lat, long, UTL, PPL, LTPL, MH, MCH, MCW, MCIL, LTL)))
+
+xtot$Subspecies[xtot$Subspecies == "T. m. caedis"] <- "T. m. minor"
+
+xtot$Island <- droplevels(xtot$Island)
+table(xtot$Island)
+
+pc23 <- princomp(xtot[,-c(1:9)], cor=TRUE)
+for (i in 1:8) {
+  pc23$loadings[,i] <- (pc23$loadings[,i] * pc23$sdev[i])
+}
+print(summary(pc23),digits=2,loadings=pc23$loadings,cutoff=0)
+round(pc23$sdev^2,2)
+
+xtot$pc1 <- pc23[["scores"]][,1]
+xtot$pc2 <- pc23[["scores"]][,2]
+xtot$hull <- xtot$Subspecies
+
+autoplot(pc23, x = 1, y = 2, data = xtot, colour = 'Island', label = FALSE, size = 2.5, label.size = 3, frame=TRUE) + ggtitle("All Islands, skull")
+
+find_hull <- function(xtot) xtot[chull(xtot$pc1, xtot$pc2), ]
+hulls4 <- ddply(xtot, "hull", find_hull)
+
+n <- c("grey60", "grey30", "grey80", "black", "grey60")
+
+b3 <- ggplot(data = xtot, aes(x=pc1, y=pc2, group=Island)) + scale_shape_manual(values = c(15,23,18,16,24), guide = guide_legend(label.theme = element_text(angle = 0, size=7.5))) + geom_vline(aes(xintercept = 0), size=0.25) + geom_hline(aes(yintercept = 0), size=0.25) + theme_bw() + xlab("PC1 (60.38%)") + ylab("PC2 (19.53%)") + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + theme(legend.title = element_blank(), legend.background = element_rect(fill="transparent")) + theme(text = element_text(size=10)) + theme(legend.position = c(0.002, 0.002), legend.spacing.x = unit(2, 'mm'), legend.key.size = unit(2, 'mm'), legend.justification = c("left", "bottom"),  legend.box.just = "left") + geom_polygon(data=hulls4, alpha=0.3, aes(x=pc1, y=pc2, group=hull, fill=hull, linetype=hull), colour="black", show_guide = FALSE) + scale_linetype_manual(values=c(5,1,10,1)) + scale_fill_manual(values=n) + geom_point(aes(shape=Island), color = "black", fill = "white", size=2.5) + annotate("text", x=6, y=2.7, label= "B", size = 10) + xlim(-5,6.5) + ylim(-3.3, 3) + theme(legend.key.size = unit(0.65, 'lines')) + geom_text(label="T. m. minor", x=2.5, y=2.3, size = 3, color = "black", fontface = "italic", check_overlap = T) + geom_text(label="T. m.", x=-4.5, y=2.45, size = 3, color = "black", fontface = "italic", check_overlap = T) + geom_text(label="malaccana", x=-4.3, y=2.2, size = 3, color = "black", fontface = "italic", check_overlap = T) + geom_text(label="T. m. humeralis", x=4.65, y=-3, size = 3, color = "black", fontface = "italic", check_overlap = T)
+
+ggsave(b3,file="Fig. 3B proofs.pdf",width=100, height=100, units="mm")
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+u <- xtot[which(xtot$Island == "Banggi" | xtot$Island == "Balambangan"),]
+xtot2 <- xtot[-which(xtot$Island == "Banggi" | xtot$Island == "Balambangan"),]
+
+linfin2 <- lda(xtot2[,-c(1:9)],grouping=xtot2$Island, CV=FALSE)
+ctrawfin2 <- table(xtot2$Island, predict(linfin2)$class)
+ctrawfin2 #rows are actual count and columns are predicted count
+
+# total percent correct
+round(sum(diag(prop.table(ctrawfin2))),4)
+
+predict(linfin2, u[,-c(1:9)])$class
+predict(linfin2, CV=TRUE, u[,-c(1:9)])$class
+
+linfin2 <- lda(xtot2[,-c(1:9)],grouping=xtot2$Island, CV=TRUE)
+ctrawfin2 <- table(xtot2$Island, linfin2$class)
+ctrawfin2 #rows are actual count and columns are predicted count
+
+# total percent correct
+round(sum(diag(prop.table(ctrawfin2))),4)
+```
+
+DFA: 78.69%; Jackknife 72.13%
+
+When the islands are excluded from the original training dataset and treated as unknowns, they are classified as follows:
+Balambangan (n = 5) classified as Borneo;
+Banggi (n = 2) classified as Borneo.
