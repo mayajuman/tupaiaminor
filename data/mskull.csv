@@ -1,0 +1,103 @@
+Museum,Num,Subspecies,Sex,Locality,region,Type,Island,lat,long,CPL,CIL,UTL,MTL,EPL,PPL,EB,MB,LB,LIB,ZB,BB,LPL,CNL,PBPL,LTPL,LCH,MH,MCH,MCW,MCIL,LTL
+MCZ,22254,T. m. minor,f,"Dutch Borneo, Long Navang",E,,Borneo,1.79,114.9,33.44,32.85,17.03,11.97,,18.56,,14.52,13.43,11.29,19.63,16.25,35.97,32.44,22.36,14.14,8.97,11.06,6.62,2.2,25.34,16.12
+FMNH,33030,T. m. caedis,m,"Malaysia: Sabah; Sandakan, 8th mi W",NE,,Borneo,5.84,117.97,33.54,33.35,17.5,11.83,23.11,18.4,9.19,14.93,13.35,11.29,20.14,16.72,36.65,32.58,22.32,13.94,10.06,10.95,6.96,2.18,25.37,
+MCZ,36402,T. m. minor,m,"Brit. N. Borneo, Mt. Kinabalu",NE,,Borneo,6.07,116.56,33.74,33.68,17.99,,23.6,18.67,8.5,14.23,13.69,11.06,19.85,15.31,36.38,32.99,22.32,13.94,9.47,10.61,6.6,2.19,26,16.61
+MCZ,36809,T. m. minor,f,"Borneo, Sarawak, Kuching",N,,Borneo,1.57,110.33,,,,,,,,,13.16,11.37,,,,,,12.54,,9.6,6.37,1.96,,
+MCZ,36810,T. m. minor,f,"Borneo, Sarawak, Kuching",N,,Borneo,1.57,110.33,,,16.68,12.17,,,,,13.22,10.7,,,,,,14.14,,,,,,16.53
+MCZ,57003,T. m. minor,m,"Borneo, prob. Mt Kinabalu",NE,,Borneo,6.07,116.56,33.52,33.17,17.53,12.23,,18.77,,14.24,,11.69,19.98,16.69,36.45,32.79,22.2,13.73,10.11,9.83,5.75,2.07,25.44,16.38
+FMNH,65880,T. m. malaccana,f,Malaysia: Selangor; Kepong near Kuala Lumpur,W,,Malay Peninsula,3.2,101.64,33.83,33.48,17.29,12.43,,,,15,,11.1,20.88,15.83,36.21,33.08,22.11,13.87,9.24,11.02,7.11,2.22,25.73,16.29
+FMNH,76832,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,32.98,32.63,17,11.86,22.5,17.98,,14.5,12.78,10.42,,15.63,35.69,32.19,,13.72,8.95,9.92,6.14,2.07,25.31,15.9
+FMNH,76833,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,31.95,31.68,16.76,11.78,,,,,13.56,10.85,,,34.81,31.51,,12.95,9.36,,6.84,2.08,24.77,16.09
+FMNH,76835,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,,,,12.18,,,8.96,14.95,12.67,11,,15.98,,32.73,,,9,10.27,6.31,1.95,26.1,17.9
+FMNH,76836,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,32.44,32.13,16.97,11.65,,17.76,,14.71,13.69,11.2,19.28,15.66,35.27,31.73,21.84,13.38,9.61,10.15,6.66,2.27,24.59,15.73
+FMNH,76839,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,,,17.63,11.91,,,,,,,,,,,,,,,6.66,1.89,,15.87
+FMNH,76840,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,33.6,33.35,17.5,12,,18.17,,15.42,12.91,10.9,19.18,15.63,36.28,32.86,21.73,13.64,9.83,10.49,6.11,2,25.26,16.15
+FMNH,76841,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,33.64,33.55,17.79,12.17,23.17,18.77,,15.42,13.9,,19.95,16.5,36.28,32.66,22.15,13.88,,11.03,6.83,2.04,25.4,16.34
+FMNH,76842,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,35.86,35.7,19.11,13.75,,19.85,,16.14,15.8,11.54,21.14,16.98,39.05,35.18,25.47,15.63,10.57,11.16,7.47,2.63,27.42,18.04
+FMNH,76843,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Kinabatangan Dist, Little Kretam River",NE,,Borneo,5.52,118.56,33.32,33.14,17.49,12.01,23.16,18.06,,15.33,,11.33,19.27,16.07,35.62,32.48,21.87,13.81,9.58,9.64,6.07,2.24,25.31,16.42
+FMNH,76844,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, Sapagaya Forest Res",NE,,Borneo,5.59,118.14,33.22,32.89,17.58,12.05,23.04,18.48,9.12,14.98,,10.37,18.78,15.38,34.85,32.72,21.87,13.58,9.34,10.5,6.78,2.32,25.19,16.09
+FMNH,76845,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, Sapagaya Forest Res",NE,,Borneo,5.59,118.14,32.03,31.83,17.03,11.6,,,,14.38,12.32,10.32,18.41,15.35,34.49,,21.4,13.04,9.48,10.12,,2.15,,15.7
+FMNH,76846,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, Sapagaya Forest Res",NE,,Borneo,5.59,118.14,34.38,33.97,17.92,12.21,23.52,18.65,,15.38,,11.4,20.55,16.94,37.07,33.18,22.57,14.01,10.08,10.43,6.45,2.2,25.75,16.26
+FMNH,76847,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, Sapagaya Forest Res",NE,,Borneo,5.59,118.14,,,16.93,11.93,,17.39,,,12.92,10.46,,,,,21.32,13.07,9.48,10.23,6.67,2.36,24.43,15.72
+FMNH,76848,T. m. caedis,f,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, Sapagaya Forest Res",NE,,Borneo,5.59,118.14,33.24,32.88,17.15,,22.74,18.28,8.1,,13.67,11.54,19.34,,35.13,32.48,21.95,13.91,9.5,9.67,6.13,2.39,24.45,15.84
+FMNH,76850,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, Sapagaya Forest Res",NE,,Borneo,5.59,118.14,33.5,33.36,17.84,12.57,,18.51,,14.65,13.81,11.74,20.71,,36.11,33.06,22.05,13.68,9.57,9.89,5.96,2.41,25.62,16.39
+FMNH,76853,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, 5 mi N Sandakan",NE,,Borneo,5.96,118.05,33.23,32.99,17.36,11.97,,17.77,,15.12,13.36,10.88,19.44,16.26,35.72,32.43,21.56,13.28,9.86,10.24,6.77,2.28,24.7,15.94
+FMNH,76854,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, 5 mi N Sandakan",NE,,Borneo,5.96,118.05,34.13,33.91,18.21,12.21,23.79,18.78,8.82,15.17,13.55,11.78,20.23,16.4,36.54,33.05,22.82,14.2,9.66,10.64,6.43,2.51,25.65,16.74
+FMNH,76865,T. m. caedis,m,"Malaysia: Sabah; East Coast Residency, Sandakan Dist, Sapagaya Forest Reserve",NE,,Borneo,5.59,118.14,33.47,33.22,17.59,12.27,23.1,18.15,,14.84,14.14,11.86,,,35.93,33.4,22.32,13.91,,10.83,7.18,2.31,25.54,16.5
+FMNH,80095,T. m. minor,m,"Malaysia: Sarawak; First Div, Kuching, mi 4 on Stapok Rd, in Forest Reserve",N,,Borneo,1.52,110.29,,,,,,,,14.94,,11.32,20.21,16.04,,33.13,,,,10.03,6.36,2.18,25.25,
+FMNH,85928,T. m. caedis,m,"Malaysia: Sabah; Tawau Dist, Kalabakan, Sungei Tibas Camp",NE,,Borneo,4.41,117.49,34.33,34.31,18.24,12.64,,18.91,,15.48,,,,16.67,36.85,33.4,22.59,,10.06,,,2.44,26.26,16.82
+FMNH,88379,T. m. minor,f,"Malaysia: Sarawak; Fourth Division, Kelabit Plateau, Pa Main, 3000f",N,,Borneo,3.82,115.36,,,17.04,11.93,22.54,18.27,,,13.5,11.1,,,,,,13.98,,10.03,6.37,2.06,25.65,15.93
+FMNH,88380,T. m. minor,sex unknown,"Malaysia: Sarawak; Fourth Division, Kelabit Plateau, Pa Main, 3500f",N,,Borneo,3.82,115.36,,,17.37,11.85,23.43,18.77,,,,12.12,20.09,16.27,,,22.59,13.6,,10.83,6.68,2.16,25.89,16.35
+FMNH,88381,T. m. minor,f,"Malaysia: Sarawak; Fourth Division, Kelabit Plateau, Pa Main, 3500f",N,,Borneo,3.82,115.36,,,16.58,11.73,,,,,13.46,11.16,,,,,,13.14,,,,,24.43,15.7
+FMNH,88590,T. m. minor,m,"Malaysia: Sarawak; Fourth Division, Ulu Selio, 3500f",N,,Borneo,2.84,114.8,34.53,34.09,17.62,,,18.65,,15.23,13.81,11.66,20.33,16.52,36.95,33.99,22.74,14.09,9.76,11.23,7.03,2.51,26.24,16.42
+FMNH,140931,T. m. caedis,m,"Malaysia: Sabah; Banggi I, Kalangkaman, Banggi Peak, 50m",Banggi,,Banggi,7.28,117.1,35.32,35.1,18.95,13.27,,19.78,,15.38,14.91,11.6,19.95,16.59,38.61,35.11,25.21,15.74,9.89,10.71,6.87,2.57,26.76,17.56
+FMNH,141033,T. m. caedis,f,"Malaysia: Sabah; Balambangan I, Selamat Darat, 30m",Balambangan,,Balambangan,7.25,116.9,35.33,34.86,18.35,12.98,24.53,19.81,,15.14,14.1,11.66,20.02,15.74,37.76,34.41,23.55,15.51,9.54,11.07,7.11,2.17,26.47,17.03
+FMNH,141035,T. m. caedis,f,"Malaysia: Sabah; Balambangan I, Selamat Darat, 30m",Balambangan,,Balambangan,7.25,116.9,34.58,34.21,18.21,12.64,24.11,19.41,9.29,15.44,14.36,11.52,20.25,16.4,37.25,33.83,22.92,14.78,9.35,11.12,7.09,2.49,26.07,16.98
+FMNH,141339,T. m. caedis,f,"Malaysia: Sabah; Banggi I, Kalangkaman, Banggi Peak, 40m",Banggi,,Banggi,7.28,117.1,34.09,33.56,18.06,12.71,23.92,18.84,,15.27,14.07,10.83,19.69,15.57,36.33,33.05,22.61,14.59,9.14,10.65,6.43,2.42,25.79,16.93
+FMNH,141463,T. m. caedis,m,"Malaysia: Sabah; Balambangan I, Selamat Darat, 30m",Balambangan,,Balambangan,7.25,116.9,35.16,34.73,18.42,12.74,23.69,19.21,8.62,15.38,14.25,11.31,20.15,16.29,37.63,34.47,23.18,14.83,9.33,11.44,7.26,2.32,26.4,17.14
+FMNH,141464,T. m. caedis,f,"Malaysia: Sabah; Balambangan I, Selamat Darat, 30m",Balambangan,,Balambangan,7.25,116.9,33.83,33.6,17.85,12.7,24,18.74,8.77,14.68,,10.81,18.78,15.67,36.25,33.06,22.34,14.03,9.41,9.81,6.33,2.17,25.87,16.99
+BMNH,3.251,T. m. malaccana,m,"Talum, Perak",W,,Malay Peninsula,4.31,101.32,34.42,34.3,17.69,12.26,,18.87,,14.39,14.25,11.25,20.65,16.76,37.2,34.2,22.62,13.73,9.57,10.83,6.89,2.71,26.23,16.66
+BMNH,5.1278,T. m. malaccana,m,Kangka Aming Johore,S,,Malay Peninsula,1.56,103.59,33.66,33.22,17.19,12.04,,18.04,,14.98,14.48,11.59,20.39,16.56,36.07,32.94,22.27,13.82,9.41,11.06,6.88,2.41,25.67,
+BMNH,8.72011,T. m. malaccana,m,"Semangko Pass, Selangor",W,,Malay Peninsula,3.7,101.75,,,17.23,12.03,,18.22,,,14.07,11.51,,15.59,34.77,,21.44,13.06,,10.5,7.02,2.57,26.2,16.61
+BMNH,8.72013,T. m. malaccana,f,"C(G)heras, Selangor",W,,Malay Peninsula,3.07,101.77,32.51,32.45,17.09,,,17.86,,13.97,14.11,11.52,20.1,16.63,35.39,32.15,21.9,13.44,9.04,10.14,6.66,2.51,25.17,16.21
+BMNH,10.4576,T. m. minor,m,"Karanginl(t)on, Martapoera R., S. Borneo",SE,,Borneo,-3.65,115.4,33.08,32.69,,,,18.27,,14.39,13.4,11.09,,16.25,35.6,32.7,21.94,13.59,9.89,10.11,6.83,2.34,25.61,16.63
+BMNH,10.4577,T. m. minor,f,"Karanginl(t)on, Martapoera R., S. Borneo",SE,,Borneo,-3.65,115.4,32.04,31.78,16.85,11.4,,17.65,,14.24,12.51,10.42,18.67,16,34.19,31.3,21.14,12.88,9.38,9.66,6.18,1.93,24.38,15.81
+BMNH,10.4579,T. m. minor,m,"Poerock Tjahoe, Barito R., S. C. Borneo",S,,Borneo,-0.58,114.58,32.42,32.6,16.92,11.52,,17.51,,13.74,13.69,11.11,18.95,16.4,34.9,31.73,21.35,13,9.3,10.35,6.86,2.16,25.2,15.9
+BMNH,19.11525,T. m. humeralis,m,"Pasei Gauling, W. Coast",Sumatra,,Sumatra,x,x,,,,12.41,,,,,,,,,,,,,,,,,,16.02
+BMNH,40.363,T. m. humeralis,m,"Anci Kloof, W. Sumatra",W,,Sumatra,-0.75,100.31,,,18.02,12.52,,18.65,,,14.54,11.7,,16.12,36.6,,23.25,14.42,,,,,,16.83
+BMNH,40.365,T. m. humeralis,m,"Anci Kloof, W. Sumatra",W,,Sumatra,-0.75,100.31,,,17.43,12.04,,18.1,,,13.91,,,,,,22.3,14.08,,10.66,6.5,2.4,,16.43
+BMNH,40.366,T. m. humeralis,f,"Anci Kloof, W. Sumatra",W,,Sumatra,-0.75,100.31,34.87,34.44,17.98,12.22,,19.04,,14.68,14.03,11.72,,16.83,37.73,33.7,23.35,14.58,9.7,10.2,6.34,2.57,26.61,16.91
+BMNH,40.368,T. m. humeralis,m,"Padang Pandjang, W. Sumatra",W,,Sumatra,-0.46,100.39,35.51,34.78,17.84,12.52,,20,,14.5,14.77,11.97,,16.9,37.72,34.36,23.85,15.89,9.39,10.82,6.77,2.3,26.76,16.56
+BMNH,40.369,T. m. humeralis,m,"Padang Pandjang, W. Sumatra",W,,Sumatra,-0.46,100.39,34.97,34.75,17.95,12.27,,18.74,,15.05,14.49,11.58,20.78,,,34.5,23.2,14.28,,11.54,7.59,2.87,26.45,16.4
+BMNH,40.37,T. m. humeralis,m,"Padang Pandjang, W. Sumatra",W,,Sumatra,-0.46,100.39,38.81,38.14,20.63,14.06,,21.75,,15.61,,,,,41.64,37.86,26.54,17.44,10.67,12.01,7.65,2.79,29.96,19.5
+BMNH,40.372,T. m. humeralis,f,"Padang Pandjang, W. Sumatra",W,,Sumatra,-0.46,100.39,33.41,33.15,17.18,11.98,,18.33,,14.38,13.63,12.04,,16.23,36.3,32.79,,13.61,9.08,10.46,6.49,2.12,24.85,15.46
+BMNH,47.1497,T. m. caedis,f,"Balambangan Island, North Borneo",Balambangan,Holotype,Balambangan,7.27,116.93,33.9,33.44,17.22,12.19,,18.48,,13.73,14.02,11.11,18.98,16.74,36.56,33.18,22.67,14.24,9.01,10.7,7.04,2.11,25.8,16.48
+BMNH,55.1227,T. m. malaccana,f,"Tonjong Antu, Dindings",W,,Malay Peninsula,4.26,100.61,34.42,34.1,18.02,12.56,,18.84,,14.79,14.09,11.21,20.31,16.35,37.08,34,22.84,14.22,9.38,10.72,6.67,2.5,25.87,16.49
+BMNH,55.1408,T. m. malaccana,f,"Batu, Selangor, Malaysia",W,,Malay Peninsula,2.71,101.55,,,,,,17.24,,,,11.01,,,,,21.08,13.2,,10.18,,,,
+BMNH,55.1409,T. m. malaccana,m,"Cheras, Selangor, Malaysia",W,,Malay Peninsula,3.07,101.77,,,18.18,12.28,,18.94,,,14.32,11.71,,,,,22.65,14.12,,10.86,6.71,2.39,25.43,16.32
+BMNH,55.141,T. m. malaccana,f,"Kuala Lumpur, Selangor, Malaysia",W,,Malay Peninsula,3.14,101.69,,,,,,,,13.61,12.92,10.49,18.55,,,,,,9.3,9.59,5.87,2.09,24.05,15.26
+BMNH,55.1411,T. m. malaccana,f,"Kuala Lumpur, Selangor, Malaysia",W,,Malay Peninsula,3.14,101.69,,,,,,,,13.93,13.42,10.71,18.76,16.01,,31.49,,,9.18,9.88,6.47,2.18,,
+BMNH,55.1412,T. m. malaccana,m,"Nyalas, Malacca, Malaysia",W,,Malay Peninsula,2.43,102.48,34.28,33.96,17.71,12.21,,18.71,,14.31,13.95,11.6,20.53,16.11,36.98,33.57,22.53,14.23,9.95,10.32,6.7,2.65,,
+BMNH,55.1414,T. m. malaccana,m,"Labang Endau, East Coast, Pahang, Malaysia",E,,Malay Peninsula,2.59,103.63,33.45,33.04,17.28,11.92,,18.16,,14.69,14.4,11.62,19.89,16.31,35.84,32.54,22.29,13.89,8.93,10.88,7.2,2.44,24.95,15.75
+BMNH,55.1415,T. m. malaccana,m,"Klang Gates, Selangor, Malaysia",W,,Malay Peninsula,3.24,101.77,33.9,33.62,17.31,12.05,,18.44,,14.61,14.55,11.9,21.01,16.27,36.56,33.56,22.56,13.95,9.5,10.85,6.83,2.38,,
+BMNH,55.1416,T. m. malaccana,f,"Benom Foothills, Pahang, Malaysia",E,,Malay Peninsula,3.82,102.09,33.36,,,12.27,,18.09,,,13.4,10.87,19.14,,36.07,33.17,22.02,13.82,,10.13,6.62,2.28,,
+BMNH,55.1417,T. m. malaccana,f,"Bukit Tampin, Negri Sembilan, Malaysia",W,,Malay Peninsula,2.49,102.21,32.74,32.33,16.82,11.98,,17.97,,14.32,13.55,10.9,18.56,16.66,35.42,32.42,21.38,13.24,9.25,9.6,6.11,1.89,25.06,16.13
+BMNH,55.1418,T. m. malaccana,m,"Cheras, Selangor, Malaysia",W,,Malay Peninsula,3.07,101.77,33.98,33.97,17.78,12.54,,18.37,,14.64,14.3,11.8,20.45,16.4,36.88,33.29,22.3,13.85,9.66,11.27,7.17,2.47,26.25,16.41
+BMNH,55.676,T. m. minor,f,"Paku, Sarebas, Sarawak",N,,Borneo,1.8,111.3,,33.52,,,,,,14.19,13.95,11.45,20,16.09,35.56,33.09,21.75,13.16,10.08,10.8,6.97,2.43,25.89,
+BMNH,55.677,T. m. minor,m,"Udan, Paku, Sarebas, Sarawak",N,,Borneo,1.8,111.3,34.98,34.52,17.94,12.26,,19.59,,14.47,14.59,11.81,20.21,16.55,37.2,34.61,23.21,14.92,9.83,11.17,7.53,2.47,26.64,16.83
+BMNH,55.678,T. m. minor,m,"Sungei Lenin, Tinjar River, Baram, Sarawak",N,,Borneo,3.61,114.15,,,16.92,11.88,,18.2,,,15.41,12.08,21.31,15.59,33.05,,22.69,14.01,,10.77,6.41,2.22,25.4,16.22
+BMNH,55.679,T. m. minor,m,"Entawa, Samarahan, Sarawak",N,,Borneo,1.12,111.53,33.21,33.01,16.95,12.06,,18.34,,13.82,14.46,11.95,21.1,16.86,35.66,32.31,22.57,13.81,9.42,10.54,7.03,2.45,25.67,15.8
+BMNH,55.68,T. m. minor,f,"Sungei Pelandok, Paku, Sarebus, Sarawak",N,,Borneo,1.64,112.3,32.8,32.51,,,,17.48,,14.57,13.82,10.99,20.17,16.58,35.52,32.41,21.44,12.95,9.74,10.15,6.7,2.13,25.68,16.64
+BMNH,55.681,T. m. minor,f,"Sungei Pelandok, Paku, Sarebus, Sarawak",N,,Borneo,1.64,112.3,32.56,32.1,16.85,11.5,,18.03,,14.14,12.91,11.43,,16.07,35.44,31.63,21.73,12.66,9.29,10.23,6.8,2.48,24.57,15.89
+BMNH,55.682,T. m. minor,m,"Paku, Sarebus, Saeawak",N,,Borneo,1.8,111.3,33.83,33.42,17.33,12.31,,18.42,,13.97,14.01,11.65,19.02,16.18,36.62,33.37,22.2,13.82,9.81,11.25,7.48,2.45,25.89,16.52
+BMNH,55.683,T. m. minor,,"Lingit, Sarawak",N,,Borneo,1.58,111.65,34.72,34.25,17.41,11.74,,18.61,,14.37,14.55,11.99,20.47,16.11,37.46,34.34,22.99,14.28,9.98,11.03,7.1,2.43,26.13,16.53
+BMNH,61.1152,T. m. malaccana,m,"Bukit Lagong Forest Reserve, Kepong, Selangor, Malaya",W,,Malay Peninsula,3.26,101.61,34.6,34.48,18.22,,,19.3,,14.83,14.44,11.63,20.66,17.18,37.32,34.13,22.91,14.27,9.75,10.93,7.02,2.27,26.11,16.59
+BMNH,61.1153,T. m. malaccana,f,"Bukit Lagong Forest Reserve, Kepong, Selangor, Malaya",W,,Malay Peninsula,3.26,101.61,33.07,,,,,18.12,,14.03,13.82,11.13,19.25,16.45,35.45,32.82,21.72,13.58,9.78,10.37,6.77,2.17,24.95,16.17
+BMNH,64.4124,T. m. humeralis,,Sumatra,Sumatra,,Sumatra,x,x,,,15.8,12.02,,16.44,,,12.45,10.46,,16.08,,,,11.68,,10.51,6.61,2.22,,
+BMNH,67.1478,T. m. malaccana,f,"Base Camp, Gunong Benom, Pahang, Malaysia",E,,Malay Peninsula,3.82,102.09,33.5,33.01,16.88,12.09,,18.26,,14.5,14.29,11.57,20.15,16.27,36.13,33.24,22.05,13.57,9.91,10.73,6.8,2.47,25.58,16.18
+BMNH,71.2543,T. m. minor,m,"Cocoa Research Station, Quoin Hill, Tawau, N. Borneo, 750 ft",NE,,Borneo,4.7,118.03,33.52,33.24,17.85,12.21,,18.51,,14.36,13.87,11.02,20,15.66,36.66,32.86,22.61,13.97,9.22,11.16,6.93,2.19,25.55,16.77
+BMNH,71.2546,T. m. minor,m,"Cocoa Research Station, Quoin Hill, Tawau, N. Borneo (750 ft)",NE,,Borneo,4.7,118.03,33.75,33.63,17.76,12.13,,18.21,,13.92,13.41,11.2,19.77,15.96,36.01,32.62,22.5,13.97,9.34,9.92,6.33,2.27,26.08,16.79
+BMNH,71.2547,T. m. minor,m,"Cocoa Research Station, Quoin Hill, Tawau, N. Borneo (750 ft)",NE,,Borneo,4.7,118.03,33.98,33.57,17.92,12.45,,18.9,,13.87,14.06,11.35,20.08,15.98,36.45,32.83,22.6,14.38,9.49,11.4,7.12,2.16,25.62,16.8
+BMNH,71.2548,T. m. minor,m,"Cocoa Research Station, Quoin Hill, Tawau, N. Borneo (750 ft)",NE,,Borneo,4.7,118.03,34.17,33.57,17.56,12.34,,18.96,,14.31,13.72,11.04,18.71,16.14,35.98,33.11,22.68,14.54,8.9,10.23,6.41,2.12,26.03,16.51
+BMNH,71.2549,T. m. minor,m,"Cocoa Research Station, Quoin Hill, Tawau, N. Borneo, 750 ft",NE,,Borneo,4.7,118.03,33.84,33.15,16.79,11.86,,,,14.25,13.11,10.75,19.35,16.7,36.23,32.65,22.01,13.95,10.22,10.75,,,,
+BMNH,71.2551,T. m. minor,f,"6th Mile Rock Road, Kuching, Sarawak, Borneo",N,,Borneo,1.53,110.34,33.14,32.95,17.7,12.59,,18.24,,13.91,12.74,10.85,,15.65,35.46,31.97,21.75,13.39,9,10.25,6.72,2.05,25.21,16.57
+BMNH,71.2552,T. m. minor,m,"Beaufort Compound, N. Borneo",NE,,Borneo,5.58,116.25,35.27,34.91,18.35,12.5,,19.6,,14.41,,11.58,19.37,15.95,37.53,34.36,23.65,,9.31,11.03,6.9,2.14,26.73,16.99
+BMNH,71.2553,T. m. minor,f,"Beaufort Forest Reserve, N. Borneo",NE,,Borneo,5.58,116.25,33.59,33.34,17.18,11.91,,18.77,,14.48,14.24,11.58,19.7,16.01,35.63,32.6,22.06,14.17,9.51,11.08,7.05,2.52,25.56,16.09
+BMNH,71.2554,T. m. minor,m,"Tinampah, Bundu Tuwan Forest, N. Borneo",NE,,Borneo,6,116.53,33,32.67,16.96,11.69,,18.13,,14.05,13.14,11.23,18.71,16.06,35.13,32.08,21.52,13.12,9.32,10.54,6.73,2.42,25.16,16.19
+BMNH,71.2555,T. m. minor,m,North Borneo,NE,,Borneo,x,x,34.64,33.95,18.33,12.33,,,,14.4,13.87,10.85,18.94,16.46,36.59,32.74,23.15,14.59,9.19,11.39,,,,
+BMNH,71.2556,T. m. minor,,N. Borneo,NE,,Borneo,x,x,34.61,34.04,,,,,,14.22,13.71,11.27,,15.96,36.9,34.27,23.04,14.44,9.03,10.72,,,,
+BMNH,76.5221,T. m. minor,,Mainland opposite Labuan,NE,cotype,Borneo,5.33,115.44,,,18.52,12.71,,20.2,,,13.45,11.55,19.42,15.35,,,23.92,15.37,,10.83,6.69,2.56,26.29,16.7
+BMNH,76.5222,T. m. minor,,Mainland opposite Labuan,NE,cotype,Borneo,5.33,115.44,,,18.01,12.06,,19.33,,,,,,,,,23.66,15.28,,10.35,6.45,2.43,26.88,17.11
+BMNH,76.5223,T. m. minor,,Mainland opposite Labuan,NE,cotype,Borneo,5.33,115.44,,,17.43,12.36,,18.5,,14.5,12.55,10.39,18.48,16.64,,,22.05,13.71,,10.25,6.07,1.99,25.42,16.68
+BMNH,76.5224,T. m. minor,,Mainland opposite Labuan,NE,cotype,Borneo,5.33,115.44,,,17.98,12.2,,18.96,,14.23,13.83,11.19,19.83,15.16,,,22.62,14.28,,10.33,6.39,2.25,26.02,16.54
+BMNH,76.5225,T. m. minor,,Mainland opposite Labuan,NE,cotype,Borneo,5.33,115.44,,,17.92,12.51,,18.81,,,13.64,11.51,,,,,23.29,14.6,,10.3,6.62,2.08,26.04,16.53
+BMNH,81.3155,T. m. humeralis,,S. Sumatra,Sumatra,,Sumatra,x,x,,,18.34,12.83,,19.15,,14.73,14.19,11.97,,16.44,,,23.16,14.43,,11.03,7.09,2.48,26.33,17.1
+BMNH,85.8195,T. m. malaccana,,Johore (W. Davison),S,,Malay Peninsula,2.05,103.36,,,17.96,12.57,,18.83,,,13.37,11.3,,,,,22.71,14.36,,10.33,6.85,2.15,26.1,16.85
+BMNH,88.8135,T. m. minor,,"Baram R., N.W. Borneo",N,,Borneo,4.22,114.24,,,17.15,11.78,,18.05,,14.4,14.46,11.71,19.71,15.5,,,22.43,13.89,,10.85,6.82,2.3,25.05,15.79
+BMNH,88.8136,T. m. minor,,"Trusan, N.W. Borneo",N,,Borneo,4.78,115.27,33.64,33.27,18,12.79,,18.98,,14.79,13.48,11.37,,16.51,,32.9,22.91,14.31,,10.61,6.8,2.55,,
+BMNH,92.278,T. m. minor,m,"Mt. Dulit, North Borneo",N,,Borneo,3.55,114.25,34.05,33.55,17.6,11.85,,19.02,,14.29,13.58,11.15,,16.11,36.94,32.85,,14.17,9.24,10.56,6.5,2.25,26.18,16.89
+BMNH,92.279,T. m. minor,f,"Mt. Dulit, N. Borneo",N,,Borneo,3.55,114.25,,,17.31,12.29,,18.33,,,14.16,11.48,,16.91,35.49,,22.34,13.18,,10.34,6.53,2.31,25.75,16.36
+BMNH,93.414,T. m. minor,,"Kina Balu, N. Borneo",NE,,Borneo,6.07,116.56,32.48,32.35,16.8,12.06,,18.6,,13.87,13.68,10.97,18.75,15.3,,22.13,13.76,,,9.66,6.07,2.14,24.67,15.93
+BMNH,94.625,T. m. minor,m,"Tutan River, Baram",N,,Borneo,4.18,114.33,33.5,,16.98,11.39,,18.15,,,14.2,11.08,20.41,16.64,36.68,32.93,22.5,13.64,9.86,10.55,6.86,2.25,25.68,15.84
+BMNH,94.729,T. m. caedis,,Banguey Island,Banggi,,Banggi,7.28,117.1,,,,,,18.29,,,,,,,,,,,,10.46,6.74,2.27,25.47,16.52
+BMNH,99.12911,T. m. minor,m,"Mt. Dulit, Baram R.",N,,Borneo,3.55,114.25,32.69,32.6,16.73,11.81,,18.07,,13.47,13.74,11.32,19.25,15.5,35.21,32.41,22.31,13.74,9.58,10.07,6.64,2.37,25.33,15.79
